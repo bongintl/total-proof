@@ -1,0 +1,123 @@
+@import 'grid';
+
+@font-face {
+  font-family: 'PortraitText';
+  src: url('./fonts/PortraitText-Regular.otf');
+}
+
+@font-face {
+  font-family: 'PortraitText';
+  src: url('./fonts/PortraitText-RegularItalic.otf');
+  font-style: italic;
+}
+
+
+body{
+    margin: 0;
+    background-color: #252625;
+    font-family: 'PortraitText', serif;
+    color: #ECE9E6;
+    font-size: 18px;
+}
+
+header {
+    
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    
+    img {
+        
+        position: absolute;
+        width: 85%;
+        top: 50%;
+        left: 7.5%;
+        transform: translateY( -50% );
+
+    }
+    
+}
+
+.shader {
+    
+    &_below {
+        
+        z-index: -100;
+        
+    }
+    
+    &_above {
+        
+        z-index: 100;
+        pointer-events: none;
+        
+    }
+        
+    top: 50%;
+    left: 50%;
+    transform: translate( -50%, -50% );
+    
+    &_mixer{
+        cursor: pointer;
+        pointer-events: visible;
+    }
+    
+    &_header{
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+    }
+    
+}
+
+p {
+    font-size: 1.75rem;
+    line-height: 1.3;
+
+}
+
+.static{
+    
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -100;
+    
+}
+
+.row {
+    img {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.home {
+    p {
+        font-size: 3rem;
+        padding-bottom: 6rem;
+    }
+}
+
+.art-title {
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    
+    h1 {
+        position: absolute;
+        font-size: 2.5em;
+        font-weight: normal;
+        line-height: 1;
+        bottom: 2em;
+        left: 2em;
+        // transform: translate( -50%, -50% );
+        margin: 0;
+
+    }
+    
+}
